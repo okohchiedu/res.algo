@@ -1,0 +1,17 @@
+ALGORITHM insertionSort
+VAR
+    n,i,j,arr,insertNum
+ BEGIN
+    n := arr.length;
+    FOR i FROM 0 TO n-1 STEP step  DO
+        if (i = 1; i < n - 1; i++)
+        insertNum = arr[i]
+       j := i - 1;
+        WHILE (j > 0 && arr[j] > insertNum) SWAP
+            arr[j + i]= arr[j]
+            j = j - 1
+        END_WHILE
+           arr[j + 1] insertNum
+        END_IF
+    END_FOR
+ END
