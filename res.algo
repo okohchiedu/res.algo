@@ -1,0 +1,44 @@
+// function to check if 'str' is palindrome
+function isPalindrome(str) {
+  var i = 0, j = str.length - 1;
+ 
+  // traversing from both the ends
+  while (i < j)
+ 
+    // not palindrome
+    if (str[i++] != str[j--])
+      return false;
+ 
+  // palindrome
+  return true;
+}
+ 
+// function to remove all the palindromic words
+// from the given sentence
+function removePalinWords(str) {
+ 
+  // 'final_str' to store the final string and
+  // 'word' to one by one store each word of 'str'
+  var final_str = "", word = "";
+ 
+  // add space at the end of 'str'
+  str = str + " ";
+  var n = str.length;
+ 
+  // traversing 'str'
+  for (var i = 0; i < n; i++) {
+ 
+    // accumulating characters of the current word
+    if (str[i] != ' ')
+      word = word + str[i];
+ 
+    else {
+ 
+      // if 'word' is not palindrome then a
+      // add it to 'final_str'
+      if (!(isPalindrome(word)))
+        final_str += word + " ";
+ 
+      // reset
+      word = "";
+    }
